@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D8 Studio - contact</title>
+</head>
+<body>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2>Забронировать или Обсудить Проект</h2>
+      <p>Свяжитесь с нами удобным способом</p>
+    </div>
+
+    <!-- Contact Content Grid -->
+    <div class="contact-grid">
+      <!-- Primary Booking Column -->
+      <div class="booking-column">
+        <div class="booking-card glass-card">
+          <h3>Забронировать Студию</h3>
+          <p>Выберите удобное время и забронируйте студию онлайн</p>
+          
+          <!-- YClients Widget Integration -->
+          <div class="yclients-widget-placeholder">
+            <button class="btn btn-primary btn-large booking-btn" data-yclients-booking>
+              <span>Забронировать студию</span>
+              <small>Онлайн бронирование</small>
+            </button>
+          </div>
+          
+          <div class="booking-benefits">
+            <div class="benefit-item">
+              <span class="benefit-icon">📅</span>
+              <span>Реальные слоты времени</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">💳</span>
+              <span>Онлайн оплата</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">⚡</span>
+              <span>Мгновенное подтверждение</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Options Column -->
+      <div class="contact-options-column">
+        <!-- Quick Connect -->
+        <div class="quick-connect-card glass-card">
+          <h3>Быстрая Связь</h3>
+          <p>Напишите нам для быстрого ответа</p>
+          
+          <div class="quick-connect-buttons">
+            <a href="https://t.me/d8studio" class="btn btn-secondary btn-telegram" target="_blank">
+              <span class="btn-icon">📱</span>
+              <span>Telegram</span>
+            </a>
+            <a href="https://wa.me/79000000000" class="btn btn-secondary btn-whatsapp" target="_blank">
+              <span class="btn-icon">💬</span>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Inquiries -->
+        <div class="service-inquiries-card glass-card">
+          <h3>Обсудить Проект</h3>
+          <p>Фото/видео съемка и дополнительные услуги</p>
+          
+          <div class="service-buttons">
+            <button class="btn btn-outline service-inquiry-btn" data-service="photo">
+              <span>Фотосъемка</span>
+              <small>от 10,000₽</small>
+            </button>
+            <button class="btn btn-outline service-inquiry-btn" data-service="video">
+              <span>Видеосъемка</span>
+              <small>от 20,000₽</small>
+            </button>
+            <button class="btn btn-outline service-inquiry-btn" data-service="additional">
+              <span>Доп. услуги</span>
+              <small>Обсудим с вами</small>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info-section">
+      <div class="contact-info-grid">
+        <!-- Location Info -->
+        <div class="location-info glass-card">
+          <h4>Расположение</h4>
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>D8 Studio</strong>
+              <p>13-й этаж, Бизнес-центр класса B+</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🚇</span>
+            <div>
+              <strong>Транспорт</strong>
+              <p>5 минут от МЦК ЗИЛ и метро Автозаводская</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🚗</span>
+            <div>
+              <strong>Парковка</strong>
+              <p>Парковка доступна</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="hours-info glass-card">
+          <h4>Режим Работы</h4>
+          <div class="hours-list">
+            <div class="hours-item">
+              <span>Пн-Пт</span>
+              <span>09:00 - 22:00</span>
+            </div>
+            <div class="hours-item">
+              <span>Сб-Вс</span>
+              <span>10:00 - 20:00</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">👥</span>
+            <div>
+              <strong>Менеджеры</strong>
+              <p>Всегда на месте</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-details glass-card">
+          <h4>Контакты</h4>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Телефон</strong>
+              <p>+7 (900) 000-00-00</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p>info@d8studio.ru</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🌐</span>
+            <div>
+              <strong>Соцсети</strong>
+              <p>@d8studio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Inquiry Modal (Hidden by default) -->
+  <div class="service-modal" id="serviceModal" style="display: none;">
+    <div class="modal-overlay"></div>
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h3 id="modalTitle">Обсудить Проект</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form class="service-inquiry-form" id="serviceForm">
+          <div class="form-group">
+            <label for="clientName">Ваше имя</label>
+            <input type="text" id="clientName" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="clientPhone">Телефон</label>
+            <input type="tel" id="clientPhone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="projectDetails">Расскажите о проекте</label>
+            <textarea id="projectDetails" name="details" rows="4" placeholder="Опишите ваш проект, сроки, бюджет..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Отправить запрос</button>
+            <button type="button" class="btn btn-secondary" id="modalCancel">Отмена</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

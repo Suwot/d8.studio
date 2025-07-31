@@ -1,1147 +1,962 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D8 Studio - Премиум студия на 13 этаже с профессиональными услугами</title>
+    <title>D8 Studio - Аренда Фотостудии Москва | 13 этаж с панорамными окнами</title>
+    <meta name="description" content="Премиум фотостудия на 13 этаже с панорамными окнами. Аренда студии, фото/видео съемка, дополнительные услуги.">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Header -->
-    <header class="header">
+<!-- Header Section -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/logo.png" alt="D8 Studio" class="logo-img">
+      </div>
+      <nav class="nav">
+        <a href="#hero" class="nav-link">Главная</a>
+        <a href="#services" class="nav-link">Услуги</a>
+        <a href="#interior" class="nav-link">Интерьер</a>
+        <a href="#location" class="nav-link">Локация</a>
+        <a href="#reviews" class="nav-link">Отзывы</a>
+        <a href="#contact" class="nav-link">Контакты</a>
+      </nav>
+      <div class="header-cta">
+        <button class="btn btn-primary booking-btn">Забронировать студию</button>
+      </div>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="hero-bg">
+    <img src="images/studio photos (best picks)/IMG_9117.JPG" alt="D8 Studio - Студия с лучшими видами в Москве" class="hero-image">
+    <div class="hero-overlay"></div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-icon">🏢</span>
+        13-й этаж • Панорамные виды • Естественный свет
+      </div>
+      
+      <h1 class="hero-title">
+        Студия с <em>лучшими видами</em> в Москве
+      </h1>
+      
+      <p class="hero-description">
+        Арендуйте профессиональную студию на 13-м этаже с панорамными окнами, естественным светом и всеми удобствами. Идеально для съемок, встреч и творческой работы.
+      </p>
+      
+      <div class="hero-buttons">
+        <button class="btn btn-primary btn-large booking-btn">
+          Забронировать студию
+        </button>
+        <button class="btn btn-glass btn-large" onclick="scrollToSection('services')">
+          Посмотреть услуги
+        </button>
+      </div>
+      
+      <div class="hero-features">
+        <div class="feature-item">
+          <span class="feature-icon">🏢</span>
+          <span>13-й этаж</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🌅</span>
+          <span>Панорамные виды</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">☀️</span>
+          <span>Естественный свет</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="section" id="services">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="text-center mb-5">
+      <h2>Наши Услуги</h2>
+      <p class="text-large">Премиум студия с полным спектром услуг для ваших проектов</p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="services-grid">
+      
+      <!-- Studio Rental Card (PRIMARY/PROMINENT) -->
+      <div class="card card-prominent services-card services-card-primary">
+        <div class="card-header">
+          <h3 class="card-title">Аренда Студии</h3>
+          <p class="card-subtitle">Премиум пространство на 13 этаже с панорамными окнами, профессиональным оборудованием и всеми удобствами</p>
+        </div>
+        <div class="card-body">
+          <div class="card-price">от 2,700₽/час</div>
+          <ul class="services-features">
+            <li>13-й этаж • Панорамные виды</li>
+            <li>Естественный свет</li>
+            <li>Профессиональная гримерная</li>
+            <li>Гардеробная с одеждой</li>
+            <li>Все оборудование включено</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-secondary btn-large services-cta booking-btn">
+            Забронировать студию
+          </button>
+        </div>
+      </div>
+
+      <!-- Photo Shoots Card -->
+      <div class="card services-card">
+        <div class="card-header">
+          <h3 class="card-title">Фотосъемка</h3>
+          <p class="card-subtitle">Профессиональные фотосессии любой сложности. Возможна отдельная постобработка и монтаж</p>
+        </div>
+        <div class="card-body">
+          <div class="card-price">от 10,000₽</div>
+          <ul class="services-features">
+            <li>Профессиональная съемка</li>
+            <li>Постобработка включена</li>
+            <li>Монтаж по запросу</li>
+            <li>Полный цикл производства</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-outline services-cta" onclick="openContactForm('photo')">
+            Обсудить проект
+          </a>
+        </div>
+      </div>
+
+      <!-- Video Shoots Card -->
+      <div class="card services-card">
+        <div class="card-header">
+          <h3 class="card-title">Видеосъемка</h3>
+          <p class="card-subtitle">Создание видеоконтента с полным циклом производства. Монтаж и постобработка доступны отдельно</p>
+        </div>
+        <div class="card-body">
+          <div class="card-price">от 20,000₽</div>
+          <ul class="services-features">
+            <li>Профессиональная видеосъемка</li>
+            <li>Полный цикл производства</li>
+            <li>Монтаж и постобработка</li>
+            <li>Креативные решения</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-outline services-cta" onclick="openContactForm('video')">
+            Обсудить проект
+          </a>
+        </div>
+      </div>
+
+      <!-- Additional Services Card -->
+      <div class="card services-card">
+        <div class="card-header">
+          <h3 class="card-title">Дополнительные Услуги</h3>
+          <p class="card-subtitle">Экспериментальные решения и нестандартные проекты. Готовы обсудить любые идеи</p>
+        </div>
+        <div class="card-body">
+          <div class="card-price">Обсудим с вами</div>
+          <ul class="services-features">
+            <li>Нестандартные проекты</li>
+            <li>Экспериментальные техники</li>
+            <li>Креативные решения</li>
+            <li>Индивидуальный подход</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-outline services-cta" onclick="openChat()">
+            Написать в чат
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Services Section Styles -->
+
+<!-- Services Section JavaScript -->
+
+<!-- Interior Showcase Section -->
+<section class="section interior-showcase" id="interior">
+  <div class="container-wide">
+    <div class="section-header text-center mb-5">
+      <h2>Интерьер Студии</h2>
+      <p class="text-large">Премиум пространство на 13 этаже с панорамными окнами, профессиональным оборудованием и всеми удобствами</p>
+    </div>
+
+    <!-- Gallery Navigation -->
+    <div class="gallery-nav mb-4">
+      <div class="gallery-tabs">
+        <button class="gallery-tab active" data-category="all">Все фото</button>
+        <button class="gallery-tab" data-category="best-picks">Лучшие кадры</button>
+        <button class="gallery-tab" data-category="interior">Общий интерьер</button>
+        <button class="gallery-tab" data-category="details">Детали интерьера</button>
+        <button class="gallery-tab" data-category="equipment">Оборудование</button>
+        <button class="gallery-tab" data-category="sunset">Виды из окон</button>
+      </div>
+    </div>
+
+    <!-- Image Gallery Grid -->
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Best Picks Gallery -->
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_4691 2.JPG" alt="Студия D8 - лучший ракурс интерьера" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-info">
+            <h4>Премиум интерьер</h4>
+            <p>13 этаж с панорамными окнами</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_4692 2.JPG" alt="Профессиональная студия с естественным освещением" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-info">
+            <h4>Естественное освещение</h4>
+            <p>Солнечная и закатная стороны</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_4693 2.JPG" alt="Современная фотостудия в Москве" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-info">
+            <h4>Современный дизайн</h4>
+            <p>Стильное пространство для съемок</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_8085.jpg" alt="Профессиональная студия аренда" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_8092.jpg" alt="Фотостудия с видом на Москву" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_8093.jpg" alt="Студия для фотосессий" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_8213.jpg" alt="Премиум студия аренда" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_8904 (1).JPG" alt="Профессиональная фотостудия" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_9117.JPG" alt="Студия с панорамными окнами" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_9120.JPG" alt="Современная студия Москва" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="best-picks">
+        <img class="gallery-image lazy" src="images/studio photos (best picks)/IMG_9146.JPG" alt="Фотостудия на 13 этаже" loading="lazy">
+      </div>
+
+      <!-- General Interior Gallery -->
+      <div class="gallery-item" data-category="interior">
+        <img class="gallery-image lazy" src="images/general studio interior/IMG_8211.jpg" alt="Общий вид студии D8" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-info">
+            <h4>Общий вид студии</h4>
+            <p>Просторное помещение для съемок</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="interior">
+        <img class="gallery-image lazy" src="images/general studio interior/IMG_8789.JPG" alt="Интерьер фотостудии" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="interior">
+        <img class="gallery-image lazy" src="images/general studio interior/IMG_8790.JPG" alt="Студийное пространство" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="interior">
+        <img class="gallery-image lazy" src="images/general studio interior/IMG_8803.JPG" alt="Профессиональная студия интерьер" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="interior">
+        <img class="gallery-image lazy" src="images/general studio interior/IMG_8869.png" alt="Студия для аренды" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="interior">
+        <img class="gallery-image lazy" src="images/general studio interior/IMG_8920.JPG" alt="Фотостудия общий вид" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="interior">
+        <img class="gallery-image lazy" src="images/general studio interior/IMG_8921.JPG" alt="Студийное помещение" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="interior">
+        <img class="gallery-image lazy" src="images/general studio interior/IMG_8922.JPG" alt="Интерьер студии" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="interior">
+        <img class="gallery-image lazy" src="images/general studio interior/IMG_9141.JPG" alt="Студия D8 интерьер" loading="lazy">
+      </div>
+
+      <!-- Interior Details Gallery -->
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_2959.JPG" alt="Детали интерьера студии" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-info">
+            <h4>Детали интерьера</h4>
+            <p>Продуманные элементы дизайна</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_8793.JPG" alt="Элементы дизайна студии" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_8864.JPG" alt="Детали оформления" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_8865.JPG" alt="Интерьерные решения" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_8871.JPG" alt="Дизайн студии" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_8931.JPG" alt="Студийные детали" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_8932.JPG" alt="Элементы интерьера" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_8939.JPG" alt="Детали оборудования" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_8948.JPG" alt="Интерьерные акценты" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_9118.JPG" alt="Студийные элементы" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="details">
+        <img class="gallery-image lazy" src="images/interior details/IMG_9149.JPG" alt="Детали студии" loading="lazy">
+      </div>
+
+      <!-- Equipment Gallery -->
+      <div class="gallery-item" data-category="equipment">
+        <img class="gallery-image lazy" src="images/Equipment for rental/IMG_9192.JPG" alt="Профессиональное оборудование для аренды" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-info">
+            <h4>Профессиональное оборудование</h4>
+            <p>Все необходимое для съемок</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="equipment">
+        <img class="gallery-image lazy" src="images/Equipment for rental/IMG_9193.JPG" alt="Студийное оборудование" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="equipment">
+        <img class="gallery-image lazy" src="images/Equipment for rental/IMG_9194.JPG" alt="Оборудование для фотосъемки" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="equipment">
+        <img class="gallery-image lazy" src="images/Equipment for rental/IMG_9195.JPG" alt="Техника для студии" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="equipment">
+        <img class="gallery-image lazy" src="images/Equipment for rental/Light.JPG" alt="Студийный свет" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="equipment">
+        <img class="gallery-image lazy" src="images/Equipment for rental/photocamera.JPG" alt="Фотокамера профессиональная" loading="lazy">
+      </div>
+
+      <!-- Sunset Views Gallery -->
+      <div class="gallery-item" data-category="sunset">
+        <img class="gallery-image lazy" src="images/Sunset view/IMG_2955 2.JPG" alt="Закатный вид из студии" loading="lazy">
+        <div class="gallery-overlay">
+          <div class="gallery-info">
+            <h4>Панорамные виды</h4>
+            <p>Закатная сторона с видом на Москву</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="sunset">
+        <img class="gallery-image lazy" src="images/Sunset view/IMG_3184.JPG" alt="Вид из окон студии" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="sunset">
+        <img class="gallery-image lazy" src="images/Sunset view/IMG_3249 2.JPG" alt="Панорамные окна студии" loading="lazy">
+      </div>
+
+      <div class="gallery-item" data-category="sunset">
+        <img class="gallery-image lazy" src="images/Sunset view/IMG_8818.png" alt="Вид на Москву из студии" loading="lazy">
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="gallery-cta text-center mt-5">
+      <div class="cta-content glass p-4" style="border-radius: 16px; max-width: 600px; margin: 0 auto;">
+        <h3 class="mb-3">Готовы забронировать студию?</h3>
+        <p class="mb-4">Премиум пространство на 13 этаже с панорамными окнами и всеми удобствами для ваших съемок</p>
+        <button class="btn btn-primary btn-large booking-btn" data-yclients-booking>
+          Забронировать студию
+        </button>
+        <div class="cta-benefits mt-3">
+          <span class="benefit-item">13-й этаж</span>
+          <span class="benefit-separator">•</span>
+          <span class="benefit-item">Панорамные виды</span>
+          <span class="benefit-separator">•</span>
+          <span class="benefit-item">Естественный свет</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-image" id="lightboxImage" alt="">
+      <div class="lightbox-nav">
+        <button class="lightbox-prev" onclick="previousImage()">&#8249;</button>
+        <button class="lightbox-next" onclick="nextImage()">&#8250;</button>
+      </div>
+      <div class="lightbox-info" id="lightboxInfo">
+        <h4 id="lightboxTitle"></h4>
+        <p id="lightboxDescription"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="location-benefits section">
         <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="logo.svg" alt="D8 Studio" class="logo-img">
-                </div>
-                <nav class="nav">
-                    <a href="#rental" class="nav-link">Аренда студии</a>
-                    <a href="#photography" class="nav-link">Фотосъемка</a>
-                    <a href="#innovation" class="nav-link">Инновации</a>
-                    <a href="#reviews" class="nav-link">Отзывы</a>
-                    <a href="#contact" class="nav-link">Контакты</a>
-                </nav>
-                <div class="header-cta">
-                    <button class="btn btn-primary">Получить консультацию</button>
-                </div>
-                <button class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header></span></button>
+            <div class="location-benefits-content">
+                <!-- Location Section -->
+                <div class="location-section">
+                    <div class="location-header">
+                        <h2 class="location-title">Расположение</h2>
+                        <p class="location-subtitle">Удобное расположение в центре Москвы</p>
+                    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slider">
-            <!-- Slide 1: Studio Rental -->
-            <div class="hero-slide active" data-slide="1">
-                <div class="hero-bg">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop"
-                        alt="D8 Studio - Аренда премиум студии на 13 этаже" class="hero-image">
-                    <div class="hero-overlay"></div>
-                </div>
-                <div class="container">
-                    <div class="hero-content">
-                        <div class="hero-badge">
-                            <span class="badge-icon">🏢</span>
-                            13-й этаж • Панорамные окна • Премиум локация
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="map-icon">📍</div>
+                            <div>D8 Studio<br>13-й этаж с панорамными видами</div>
                         </div>
-                        <h1 class="hero-title">
-                            Арендуйте студию<br>
-                            с <em>лучшими видами</em> в Москве
-                        </h1>
-                        <p class="hero-description">
-                            Уникальная студия на 13 этаже с панорамными окнами.
-                            Солнечная И закатная сторона, все удобства для идеальной съемки.
-                        </p>
-                        <div class="hero-buttons">
-                            <button class="btn btn-white">Арендовать студию</button>
-                            <button class="btn btn-outline">Посмотреть цены</button>
+                    </div>
+
+                    <div class="transport-info">
+                        <div class="transport-item">
+                            <div class="transport-icon">🚇</div>
+                            <div class="transport-text">МЦК ЗИЛ<br>5 минут пешком</div>
                         </div>
-                        <div class="hero-features">
-                            <div class="feature-item">
-                                <span class="feature-icon">⏰</span>
-                                <span>От 2000₽/час</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">📍</span>
-                                <span>5 мин от метро</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">✨</span>
-                                <span>Все включено</span>
-                            </div>
+                        <div class="transport-item">
+                            <div class="transport-icon">🚊</div>
+                            <div class="transport-text">Метро Автозаводская<br>5 минут пешком</div>
+                        </div>
+                        <div class="transport-item">
+                            <div class="transport-icon">🚗</div>
+                            <div class="transport-text">Парковка<br>Доступна</div>
+                        </div>
+                        <div class="transport-item">
+                            <div class="transport-icon">🏢</div>
+                            <div class="transport-text">Бизнес-центр<br>Класса B+</div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Slide 2: Photography Services -->
-            <div class="hero-slide" data-slide="2">
-                <div class="hero-bg">
-                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1920&h=1080&fit=crop"
-                        alt="D8 Studio - Профессиональная фотосъемка под ключ" class="hero-image">
-                    <div class="hero-overlay"></div>
-                </div>
-                <div class="container">
-                    <div class="hero-content">
-                        <div class="hero-badge">
-                            <span class="badge-icon">📸</span>
-                            Фотосъемка под ключ • Полный цикл • Премиум качество
+                <!-- Benefits Section -->
+                <div class="benefits-section">
+                    <div class="benefits-header">
+                        <h2 class="benefits-title">Наши Преимущества</h2>
+                        <p class="benefits-subtitle">Почему выбирают именно нас</p>
+                    </div>
+
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🏙️</div>
+                            <div class="benefit-title">13 этаж с панорамными видами</div>
+                            <div class="benefit-description">Самый высокий этаж в здании с потрясающими видами на Москву</div>
                         </div>
-                        <h1 class="hero-title">
-                            Профессиональная съемка<br>
-                            <em>от идеи до результата</em>
-                        </h1>
-                        <p class="hero-description">
-                            Команда профессионалов создаст идеальные кадры для вашего бизнеса или личного бренда.
-                            Портреты, продуктовая съемка, контент для маркетплейсов.
-                        </p>
-                        <div class="hero-buttons">
-                            <button class="btn btn-white">Заказать съемку</button>
-                            <button class="btn btn-outline">Посмотреть портфолио</button>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">☀️</div>
+                            <div class="benefit-title">Солнечная и закатная сторона</div>
+                            <div class="benefit-description">Идеальное естественное освещение в течение всего дня</div>
                         </div>
-                        <div class="hero-features">
-                            <div class="feature-item">
-                                <span class="feature-icon">💼</span>
-                                <span>От 15000₽</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">🎯</span>
-                                <span>Под ключ</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-icon">⚡</span>
-                                <span>Быстро</span>
-                            </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💄</div>
+                            <div class="benefit-title">Профессиональная гримерная</div>
+                            <div class="benefit-description">Оборудованная зона с правильным освещением для макияжа</div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">👗</div>
+                            <div class="benefit-title">Гардеробная с одеждой</div>
+                            <div class="benefit-description">Большой выбор одежды, обуви и аксессуаров для съемок</div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">👨‍💼</div>
+                            <div class="benefit-title">Менеджер на месте</div>
+                            <div class="benefit-description">Всегда готов помочь и решить любые вопросы</div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🚇</div>
+                            <div class="benefit-title">5 минут от МЦК и метро</div>
+                            <div class="benefit-description">Удобная транспортная доступность от МЦК ЗИЛ и метро Автозаводская</div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🚗</div>
+                            <div class="benefit-title">Парковка доступна</div>
+                            <div class="benefit-description">Удобная парковка для клиентов с автомобилями</div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🏢</div>
+                            <div class="benefit-title">Бизнес-центр класса B+</div>
+                            <div class="benefit-description">Современное здание с качественной инфраструктурой</div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slider Controls -->
-        <div class="hero-controls">
-            <div class="container">
-                <div class="slider-dots">
-                    <button class="dot active" data-slide="1"></button>
-                    <button class="dot" data-slide="2"></button>
-                </div>
-                <div class="slider-progress">
-                    <div class="progress-bar"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Studio Rental -->
-    <section id="rental" class="rental-section">
-        <div class="container"></div>
+<!-- Reviews Section -->
+<section class="reviews-section">
+    <div class="container">
         <div class="section-header">
-            <div class="section-badge">
-                <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
-                    <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
-                    <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
-                </svg>
-                Аренда премиум-студии
-            </div>
-            <h2 class="section-title">
-                Студия на <span>13 этаже</span><br>
-                с панорамными окнами
-            </h2>
-            <p class="section-description">
-                Самый высокий этаж в здании с потрясающими видами на Москву.
-                Солнечная И закатная сторона обеспечивает идеальное освещение весь день.
-            </p>
+            <h2 class="section-title">Отзывы Клиентов</h2>
+            <p class="section-subtitle">Что говорят о нас наши клиенты на популярных платформах</p>
         </div>
 
-        <!-- Image + Features Showcase -->
-        <div class="studio-showcase">
-            <div class="studio-image-container">
-                <div class="image-decoration"></div>
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop"
-                    alt="D8 Studio интерьер с панорамными окнами" class="studio-image">
-                <div class="image-accent"></div>
-            </div>
+        <!-- Platform Links -->
+        <div class="platform-links">
+            <a href="https://2gis.ru/moscow/firm/70000001018677075/tab/reviews" target="_blank" class="platform-link">
+                <div class="platform-badge">
+                    <span class="platform-name">2GIS</span>
+                    <span class="platform-rating">★ 4.8</span>
+                </div>
+                <span class="platform-text">Смотреть все отзывы</span>
+            </a>
+            <a href="https://yandex.ru/maps/org/d8_studio/example" target="_blank" class="platform-link">
+                <div class="platform-badge">
+                    <span class="platform-name">Яндекс Карты</span>
+                    <span class="platform-rating">★ 4.9</span>
+                </div>
+                <span class="platform-text">Смотреть все отзывы</span>
+            </a>
+            <a href="https://www.avito.ru/moskva/predlozheniya_uslug/d8_studio_example" target="_blank" class="platform-link">
+                <div class="platform-badge">
+                    <span class="platform-name">Avito</span>
+                    <span class="platform-rating">★ 5.0</span>
+                </div>
+                <span class="platform-text">Смотреть все отзывы</span>
+            </a>
+        </div>
 
-            <div class="studio-details">
-                <h3 class="details-title">Всё для комфортной работы</h3>
-                <p class="details-description">
-                    Премиум-локация с продуманными деталями. Профессиональная команда обеспечит
-                    идеальные условия для любых задач — от фотосессий до деловых встреч.
+        <!-- Review Cards Grid -->
+        <div class="reviews-grid">
+            <!-- Review Card 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h4 class="reviewer-name">Анна К.</h4>
+                        <span class="review-platform">2GIS</span>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    "Потрясающая студия на 13 этаже! Панорамные окна создают невероятную атмосферу. 
+                    Профессиональная гримерная и все необходимое оборудование. Менеджеры очень отзывчивые 
+                    и помогли с организацией съемки. Обязательно вернемся!"
                 </p>
-
-                <div class="amenities-list">
-                    <div class="amenity-item">
-                        <div class="amenity-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path
-                                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
-                                <circle cx="12" cy="12" r="3" />
-                            </svg>
-                        </div>
-                        <div class="amenity-content">
-                            <h4>Панорамные окна</h4>
-                            <p>13-й этаж с потрясающими видами на Москву, солнечная И закатная сторона</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-item">
-                        <div class="amenity-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="4" />
-                                <path
-                                    d="M12 2v2M12 20v2m-8.485-8.485l1.414 1.414M17.071 17.071l1.414 1.414M2 12h2m16 0h2M6.343 17.657l-1.414 1.414M19.071 4.929l-1.414 1.414" />
-                            </svg>
-                        </div>
-                        <div class="amenity-content">
-                            <h4>Идеальное освещение</h4>
-                            <p>Естественный свет весь день благодаря расположению на солнечной И закатной стороне</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-item">
-                        <div class="amenity-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path
-                                    d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
-                            </svg>
-                        </div>
-                        <div class="amenity-content">
-                            <h4>Гардероб + отпариватель</h4>
-                            <p>Одежда, обувь, каблуки — всё для создания идеального образа</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-item">
-                        <div class="amenity-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path
-                                    d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
-                                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
-                                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
-                                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
-                                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
-                            </svg>
-                        </div>
-                        <div class="amenity-content">
-                            <h4>Место для макияжа</h4>
-                            <p>Профессиональная зона с идеальным освещением</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-item">
-                        <div class="amenity-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path
-                                    d="M10 2v2M14 2v2M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1M6 2v2" />
-                            </svg>
-                        </div>
-                        <div class="amenity-content">
-                            <h4>Кофе и сладости</h4>
-                            <p>Комфорт и энергия для продуктивной работы</p>
-                        </div>
-                    </div>
-
-                    <div class="amenity-item">
-                        <div class="amenity-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 18V5l12-2v13" />
-                                <circle cx="6" cy="18" r="3" />
-                                <circle cx="18" cy="16" r="3" />
-                            </svg>
-                        </div>
-                        <div class="amenity-content">
-                            <h4>Аудиосистема</h4>
-                            <p>Качественный звук для создания нужной атмосферы</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Additional Features Grid -->
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon-svg">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
-                        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
-                        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
-                        <path d="M10 6h4M10 10h4M10 14h4M10 18h4" />
-                    </svg>
-                </div>
-                <h3>13-й этаж</h3>
-                <p>Самый высокий в здании — потрясающие виды в любую погоду</p>
+                <div class="review-date">Март 2024</div>
             </div>
 
-            <div class="feature-card">
-                <div class="feature-icon-svg">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path
-                            d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
-                        <circle cx="7" cy="17" r="2" />
-                        <path d="M9 17h6" />
-                        <circle cx="17" cy="17" r="2" />
-                    </svg>
-                </div>
-                <h3>Парковка и лифт</h3>
-                <p>Удобная парковка для клиентов и грузовой лифт для оборудования</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon-svg">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path
-                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                        <circle cx="12" cy="10" r="3" />
-                    </svg>
-                </div>
-                <h3>Отличная локация</h3>
-                <p>10 минут от МЦК и метро, в центральной части города</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon-svg">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect width="20" height="14" x="2" y="5" rx="2" />
-                        <line x1="2" x2="22" y1="10" y2="10" />
-                    </svg>
-                </div>
-                <h3>Онлайн-платежи</h3>
-                <p>Официальные платежи: карта, перевод, наличные</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon-svg">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path
-                            d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
-                        <circle cx="12" cy="8" r="6" />
-                    </svg>
-                </div>
-                <h3>Клиенты-инфлюенсеры</h3>
-                <p>Многие известные блогеры оставляют отзывы без просьб</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="feature-icon-svg">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path
-                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                    </svg>
-                </div>
-                <h3>Отличный сервис</h3>
-                <p>Каждая деталь продумана для вашего комфорта</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Photography Services -->
-    <section id="photography" class="photography">
-        <div class="container"></div>
-        <div class="section-header">
-            <div class="section-badge">
-                <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path
-                        d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-                    <circle cx="12" cy="13" r="3" />
-                </svg>
-                Фотосъемка под ключ
-            </div>
-            <h2 class="section-title">
-                От идеи до <span>готового результата</span>
-            </h2>
-            <p class="section-description">
-                Полный цикл фотопродукции: портреты, продуктовая съемка, контент для маркетплейсов.
-                Команда профессионалов берет все процессы на себя.
-            </p>
-        </div>
-
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <div class="pricing-icon-svg">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 6 9 17l-5-5" />
-                        </svg>
+            <!-- Review Card 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h4 class="reviewer-name">Михаил Р.</h4>
+                        <span class="review-platform">Яндекс Карты</span>
                     </div>
-                    <div class="pricing-info">
-                        <h3>Портретная съемка</h3>
-                        <p class="pricing-desc">Личные и семейные фотосессии премиум-класса</p>
-                    </div>
+                    <div class="review-rating">★★★★★</div>
                 </div>
-                <div class="price-display">
-                    <span class="price-amount">от 15 000 ₽</span>
-                </div>
-                <ul class="pricing-features">
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Индивидуальные и семейные
-                    </li>
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Уникальная локация
-                    </li>
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Обработка включена
-                    </li>
-                </ul>
-                <button class="btn btn-outline">Обсудить проект</button>
-            </div>
-
-            <div class="pricing-card featured">
-                <div class="popular-badge">Для бизнеса</div>
-                <div class="pricing-header">
-                    <div class="pricing-icon-svg featured-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.5l-2.25-1.313M12 21.5V19.25m-8.25-6.75h16.5a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-16.5A2.25 2.25 0 001.5 6.75v3.75a2.25 2.25 0 002.25 2.25z" />
-                        </svg>
-                    </div>
-                    <div class="pricing-info">
-                        <h3>Продуктовая съемка</h3>
-                        <p class="pricing-desc">Для маркетплейсов: Wildberries, Ozon, Яндекс.Маркет</p>
-                    </div>
-                </div>
-                <div class="price-display">
-                    <span class="price-amount">от 20 000 ₽</span>
-                    <span class="price-save">Увеличиваем конверсию</span>
-                </div>
-                <ul class="pricing-features">
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Съемка любой сложности
-                    </li>
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Обработка под маркетплейсы
-                    </li>
-                    <li></li>
-                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                        <path d="m9 11 3 3L22 4" />
-                    </svg>
-                    Быстрые сроки
-                    </li>
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Гарантия результата
-                    </li>
-                </ul>
-                <button class="btn btn-primary">Обсудить проект</button>
-            </div>
-
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <div class="pricing-icon-svg">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                            <circle cx="9" cy="7" r="4" />
-                            <path d="m22 21-3-3m0 0a5.5 5.5 0 1 1-7.78-7.78 5.5 5.5 0 0 1 7.78 7.78Z" />
-                        </svg>
-                    </div>
-                    <div class="pricing-info">
-                        <h3>Контент для соцсетей</h3>
-                        <p class="pricing-desc">Reels, посты, истории — готовый контент для продвижения</p>
-                    </div>
-                </div>
-                <div class="price-display">
-                    <span class="price-amount">от 18 000 ₽</span>
-                </div>
-                <ul class="pricing-features">
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Съемка + обработка
-                    </li>
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Готовые форматы
-                    </li>
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Тренды и стилистика
-                    </li>
-                    <li>
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                            <path d="m9 11 3 3L22 4" />
-                        </svg>
-                        Быстрая подача
-                    </li>
-                </ul>
-                <button class="btn btn-outline">Обсудить проект</button>
-            </div>
-        </div>
-
-        <div class="rental-footer">
-            <p class="rental-note">
-                Команда профессионалов берет все процессы на себя • Консультация и расчет стоимости бесплатно
-            </p>
-            <button class="btn btn-primary">Получить консультацию</button>
-        </div>
-        </div>
-    </section>
-
-    <!-- Innovation Section -->
-    <section id="innovation" class="innovation">
-        <div class="container"></div>
-        <div class="section-header">
-            <div class="section-badge innovation-badge">
-                <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path
-                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-                Инновации и эксперименты
-            </div>
-            <h2 class="section-title">
-                ИИ-технологии и <span>видеопродукция</span>
-            </h2>
-            <p class="section-description">
-                Экспериментируем с новыми технологиями. Первые в Москве предлагаем ИИ-генерацию
-                и полный цикл видеопроизводства.
-            </p>
-        </div>
-
-        <div class="innovation-grid">
-            <div class="innovation-card ai-card">
-                <div class="innovation-header">
-                    <div class="innovation-icon ai-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                        </svg>
-                    </div>
-                    <div class="innovation-info">
-                        <h3>ИИ-генерация контента</h3>
-                        <p class="innovation-desc">Создаем уникальные изображения с помощью искусственного интеллекта
-                        </p>
-                    </div>
-                </div>
-
-                <div class="innovation-features">
-                    <h4>Возможности ИИ:</h4>
-                    <ul class="innovation-list">
-                        <li>Генерация уникальных изображений</li>
-                        <li>Гибридные решения (ИИ + живая съемка)</li>
-                        <li>Безграничные стилистические возможности</li>
-                        <li>Быстрое создание вариаций</li>
-                        <li>Эксперименты с невозможным</li>
-                    </ul>
-                </div>
-
-                <div class="innovation-footer">
-                    <span class="innovation-price">Рассчитывается индивидуально</span>
-                    <button class="btn btn-primary">Узнать об ИИ</button>
-                </div>
-            </div>
-
-            <div class="innovation-card video-card">
-                <div class="innovation-header">
-                    <div class="innovation-icon video-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
-                            <rect x="2" y="6" width="14" height="12" rx="2" />
-                        </svg>
-                    </div>
-                    <div class="innovation-info">
-                        <h3>Видеопродукция</h3>
-                        <p class="innovation-desc">Полный цикл создания видеоконтента — от идеи до монтажа</p>
-                    </div>
-                </div>
-
-                <div class="innovation-features">
-                    <h4>Видеоуслуги:</h4>
-                    <ul class="innovation-list">
-                        <li>Reels и короткие видео</li>
-                        <li>Рекламные ролики</li>
-                        <li>Корпоративные видео</li>
-                        <li>Сценарий → съемка → монтаж</li>
-                        <li>Пост-обработка и эффекты</li>
-                    </ul>
-                </div>
-
-                <div class="innovation-footer">
-                    <span class="innovation-price">от 25 000 ₽</span>
-                    <button class="btn btn-primary">Обсудить видео</button>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Studio Rental Pricing -->
-    <section class="studio-pricing">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 6v6l4 2" />
-                        <circle cx="12" cy="12" r="10" />
-                    </svg>
-                    Аренда студии
-                </div>
-                <h2 class="section-title">
-                    Гибкие <span>условия аренды</span>
-                </h2>
-                <p class="section-description">
-                    От часовой аренды до полного дня — выберите удобный формат для ваших задач
+                <p class="review-text">
+                    "Снимали корпоративное видео. Студия превзошла все ожидания - виды из окон 
+                    потрясающие, особенно на закате. Техническое оснащение на высоте, 
+                    а главное - команда профессионалов, которые помогли реализовать все идеи."
                 </p>
+                <div class="review-date">Февраль 2024</div>
             </div>
 
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <div class="pricing-icon-svg">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 6v6l4 2" />
-                                <circle cx="12" cy="12" r="10" />
-                            </svg>
-                        </div>
-                        <div class="pricing-info">
-                            <h3>Почасовая аренда</h3>
-                            <p class="pricing-desc">Идеально для коротких съемок и встреч</p>
-                        </div>
+            <!-- Review Card 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h4 class="reviewer-name">Елена С.</h4>
+                        <span class="review-platform">Avito</span>
                     </div>
-                    <div class="price-display">
-                        <span class="price-amount">2 000 ₽</span>
-                        <span class="price-period">/час</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Минимум 1 час
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Все удобства включены
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Гибкое бронирование
-                        </li>
-                    </ul>
-                    <button class="btn btn-outline">Арендовать</button>
+                    <div class="review-rating">★★★★★</div>
                 </div>
-
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Популярно</div>
-                    <div class="pricing-header">
-                        <div class="pricing-icon-svg featured-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
-                                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
-                                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
-                                <path d="M10 6h4M10 10h4M10 14h4M10 18h4" />
-                            </svg>
-                        </div>
-                        <div class="pricing-info">
-                            <h3>Полный рабочий день</h3>
-                            <p class="pricing-desc">8 часов продуктивной работы с особыми условиями</p>
-                        </div>
-                    </div>
-                    <div class="price-display">
-                        <span class="price-amount">12 000 ₽</span>
-                        <span class="price-period">/день</span>
-                        <span class="price-save">экономия 4 000 ₽</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            8 часов аренды
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Специальная цена
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Всё включено
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Приоритетное бронирование
-                        </li>
-                    </ul>
-                    <button class="btn btn-primary">Арендовать</button>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <div class="pricing-icon-svg">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M16 7h6v6" />
-                                <path d="m22 7-8.5 8.5-5-5L2 17" />
-                            </svg>
-                        </div>
-                        <div class="pricing-info">
-                            <h3>Регулярная аренда</h3>
-                            <p class="pricing-desc">Для постоянных клиентов — максимальные выгоды</p>
-                        </div>
-                    </div>
-                    <div class="price-display">
-                        <span class="price-amount">по договоренности</span>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Индивидуальные условия
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Максимальные скидки
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Приоритет в расписании
-                        </li>
-                        <li>
-                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                                <path d="m9 11 3 3L22 4" />
-                            </svg>
-                            Персональная поддержка
-                        </li>
-                    </ul>
-                    <button class="btn btn-outline">Обсудить условия</button>
-                </div>
-            </div>
-
-            <div class="rental-footer">
-                <p class="rental-note">
-                    Предоплата 50% гарантирует ваше время • Принимаем карты, переводы, наличные
+                <p class="review-text">
+                    "Идеальное место для фотосессий! Естественный свет весь день благодаря 
+                    расположению окон. Гардеробная с большим выбором одежды и аксессуаров. 
+                    Удобное расположение - 5 минут от метро. Рекомендую всем!"
                 </p>
-                <button class="btn btn-primary">Посмотреть расписание</button>
+                <div class="review-date">Январь 2024</div>
+            </div>
+
+            <!-- Review Card 4 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h4 class="reviewer-name">Дмитрий В.</h4>
+                        <span class="review-platform">2GIS</span>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    "Арендовали студию для съемки рекламного ролика. Все на высшем уровне - 
+                    от технического оснащения до сервиса. Панорамные виды на Москву добавили 
+                    особую атмосферу нашему проекту. Цена полностью оправдана качеством."
+                </p>
+                <div class="review-date">Декабрь 2023</div>
+            </div>
+
+            <!-- Review Card 5 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h4 class="reviewer-name">Ольга М.</h4>
+                        <span class="review-platform">Яндекс Карты</span>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    "Проводили здесь фотосессию для каталога. Студия просто волшебная! 
+                    13 этаж, потрясающие виды, профессиональное освещение. Менеджеры 
+                    всегда на связи и готовы помочь. Будем сотрудничать и дальше!"
+                </p>
+                <div class="review-date">Ноябрь 2023</div>
+            </div>
+
+            <!-- Review Card 6 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <h4 class="reviewer-name">Александр Т.</h4>
+                        <span class="review-platform">Avito</span>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                </div>
+                <p class="review-text">
+                    "Отличная студия для творческих проектов! Пространство вдохновляет, 
+                    оборудование современное, а виды из окон - это отдельная история. 
+                    Команда креативная и всегда открыта к экспериментам. Очень доволен!"
+                </p>
+                <div class="review-date">Октябрь 2023</div>
             </div>
         </div>
-    </section>
 
-    <!-- Reviews -->
-    <section id="reviews" class="reviews">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path
-                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                    </svg>
-                    Отзывы клиентов
-                </div>
-                <h2 class="section-title">
-                    Клиенты получают <span>результаты</span>
-                </h2>
-                <p class="section-description">
-                    Работаем с e-commerce брендами, агентствами и частными клиентами.
-                    Увеличиваем конверсию товаров на маркетплейсах.
-                </p>
+        <!-- CTA Section -->
+        <div class="reviews-cta">
+            <h3>Готовы создать свой проект?</h3>
+            <p>Присоединяйтесь к довольным клиентам D8 Studio</p>
+            <button class="btn btn-primary booking-btn" data-yclients-booking>Забронировать студию</button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2>Забронировать или Обсудить Проект</h2>
+      <p>Свяжитесь с нами удобным способом</p>
+    </div>
+
+    <!-- Contact Content Grid -->
+    <div class="contact-grid">
+      <!-- Primary Booking Column -->
+      <div class="booking-column">
+        <div class="booking-card glass-card">
+          <h3>Забронировать Студию</h3>
+          <p>Выберите удобное время и забронируйте студию онлайн</p>
+          
+          <!-- YClients Widget Integration -->
+          <div class="yclients-widget-placeholder">
+            <button class="btn btn-primary btn-large booking-btn" data-yclients-booking>
+              <span>Забронировать студию</span>
+              <small>Онлайн бронирование</small>
+            </button>
+          </div>
+          
+          <div class="booking-benefits">
+            <div class="benefit-item">
+              <span class="benefit-icon">📅</span>
+              <span>Реальные слоты времени</span>
             </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">💳</span>
+              <span>Онлайн оплата</span>
+            </div>
+            <div class="benefit-item">
+              <span class="benefit-icon">⚡</span>
+              <span>Мгновенное подтверждение</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Stats -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">5.0</div>
-                    <div class="star-rating">
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                        </svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                        </svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                        </svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                        </svg>
-                        <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                        </svg>
+      <!-- Contact Options Column -->
+      <div class="contact-options-column">
+        <!-- Quick Connect -->
+        <div class="quick-connect-card glass-card">
+          <h3>Быстрая Связь</h3>
+          <p>Напишите нам для быстрого ответа</p>
+          
+          <div class="quick-connect-buttons">
+            <a href="https://t.me/d8studio" class="btn btn-secondary btn-telegram" target="_blank">
+              <span class="btn-icon">📱</span>
+              <span>Telegram</span>
+            </a>
+            <a href="https://wa.me/79000000000" class="btn btn-secondary btn-whatsapp" target="_blank">
+              <span class="btn-icon">💬</span>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service Inquiries -->
+        <div class="service-inquiries-card glass-card">
+          <h3>Обсудить Проект</h3>
+          <p>Фото/видео съемка и дополнительные услуги</p>
+          
+          <div class="service-buttons">
+            <button class="btn btn-outline service-inquiry-btn" data-service="photo">
+              <span>Фотосъемка</span>
+              <small>от 10,000₽</small>
+            </button>
+            <button class="btn btn-outline service-inquiry-btn" data-service="video">
+              <span>Видеосъемка</span>
+              <small>от 20,000₽</small>
+            </button>
+            <button class="btn btn-outline service-inquiry-btn" data-service="additional">
+              <span>Доп. услуги</span>
+              <small>Обсудим с вами</small>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-info-section">
+      <div class="contact-info-grid">
+        <!-- Location Info -->
+        <div class="location-info glass-card">
+          <h4>Расположение</h4>
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>D8 Studio</strong>
+              <p>13-й этаж, Бизнес-центр класса B+</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🚇</span>
+            <div>
+              <strong>Транспорт</strong>
+              <p>5 минут от МЦК ЗИЛ и метро Автозаводская</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🚗</span>
+            <div>
+              <strong>Парковка</strong>
+              <p>Парковка доступна</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="hours-info glass-card">
+          <h4>Режим Работы</h4>
+          <div class="hours-list">
+            <div class="hours-item">
+              <span>Пн-Пт</span>
+              <span>09:00 - 22:00</span>
+            </div>
+            <div class="hours-item">
+              <span>Сб-Вс</span>
+              <span>10:00 - 20:00</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">👥</span>
+            <div>
+              <strong>Менеджеры</strong>
+              <p>Всегда на месте</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-details glass-card">
+          <h4>Контакты</h4>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Телефон</strong>
+              <p>+7 (900) 000-00-00</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <p>info@d8studio.ru</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🌐</span>
+            <div>
+              <strong>Соцсети</strong>
+              <p>@d8studio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Inquiry Modal (Hidden by default) -->
+  <div class="service-modal" id="serviceModal" style="display: none;">
+    <div class="modal-overlay"></div>
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h3 id="modalTitle">Обсудить Проект</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form class="service-inquiry-form" id="serviceForm">
+          <div class="form-group">
+            <label for="clientName">Ваше имя</label>
+            <input type="text" id="clientName" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="clientPhone">Телефон</label>
+            <input type="tel" id="clientPhone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="projectDetails">Расскажите о проекте</label>
+            <textarea id="projectDetails" name="details" rows="4" placeholder="Опишите ваш проект, сроки, бюджет..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Отправить запрос</button>
+            <button type="button" class="btn btn-secondary" id="modalCancel">Отмена</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="D8 Studio" class="footer-logo">
+                    <p class="footer-tagline">Премиум фотостудия на 13 этаже с панорамными окнами</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Услуги</h4>
+                        <ul>
+                            <li><a href="#services">Аренда студии</a></li>
+                            <li><a href="#services">Фотосъемка</a></li>
+                            <li><a href="#services">Видеосъемка</a></li>
+                        </ul>
                     </div>
-                    <p class="stat-label">Средний рейтинг</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-number">200+</div>
-                    <p class="stat-label">Довольных клиентов</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-number">95%</div>
-                    <p class="stat-label">Возвращаются снова</p>
+                    
+                    <div class="footer-column">
+                        <h4>Информация</h4>
+                        <ul>
+                            <li><a href="#interior-showcase">Интерьер студии</a></li>
+                            <li><a href="#location-benefits">Расположение</a></li>
+                            <li><a href="#reviews">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Контакты</h4>
+                        <ul>
+                            <li><a href="https://t.me/d8studio" target="_blank">Telegram</a></li>
+                            <li><a href="https://wa.me/79999999999" target="_blank">WhatsApp</a></li>
+                            <li><a href="#contact">Забронировать</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <!-- Testimonials -->
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="star-rating">
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                        </div>
-                        <span class="review-source">Яндекс Карты</span>
-                    </div>
-                    <blockquote class="testimonial-text">
-                        "D8 Studio — моя любимая локация в Москве! 13-й этаж дает невероятные виды, а сервис на высшем
-                        уровне. Здесь есть всё: от профессионального освещения до кофе. Результат всегда превосходит
-                        ожидания."
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b332c775?w=100&h=100&fit=crop&crop=face"
-                            alt="Анна Волкова" class="author-avatar">
-                        <div class="author-info">
-                            <div class="author-name">Анна Волкова</div>
-                            <div class="author-title">Travel Blogger, 280K подписчиков</div>
-                        </div>
-                    </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>&copy; 2025 D8 Studio. Все права защищены.</p>
+                    <p class="footer-location">Москва • 5 минут от МЦК ЗИЛ и метро Автозаводская</p>
                 </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="star-rating">
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                        </div>
-                        <span class="review-source">2ГИС</span>
-                    </div>
-                    <blockquote class="testimonial-text">
-                        "Снимаю в D8 Studio уже год. Панорамные окна и естественный свет решают 90% задач освещения.
-                        Клиенты в восторге от видов, а я — от результата. Плюс все удобства: гардероб, макияж, даже
-                        кофе!"
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
-                            alt="Дмитрий Соколов" class="author-avatar">
-                        <div class="author-info">
-                            <div class="author-name">Дмитрий Соколов</div>
-                            <div class="author-title">Фотограф, Fashion</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="star-rating">
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                            <svg class="star" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-                            </svg>
-                        </div>
-                        <span class="review-source">Google Reviews</span>
-                    </div>
-                    <blockquote class="testimonial-text">
-                        "Идеальное сочетание профессионализма и уюта. В D8 Studio я снимаю регулярно — виды потрясающие
-                        в любую погоду. От дождливых мудрых дней до романтичных закатов. Рекомендую всем!"
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
-                            alt="Мария Петренко" class="author-avatar">
-                        <div class="author-info">
-                            <div class="author-name">Мария Петренко</div>
-                            <div class="author-title">Beauty блогер, 150K</div>
-                        </div>
-                    </div>
+                
+                <div class="footer-cta">
+                    <button class="btn btn-primary btn-small booking-btn" data-yclients-booking>Забронировать студию</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="contact-title">
-                    Обсудим ваш <span>проект?</span>
-                </h2>
-                <p class="contact-description">
-                    Забронируйте D8 Studio и получите доступ к лучшим видам Москвы,
-                    естественному освещению и профессиональному сервису на 13-м этаже
-                </p>
-
-                <div class="contact-buttons">
-                    <button class="btn btn-white">Забронировать студию</button>
-                    <button class="btn btn-outline">Обсудить проект</button>
-                </div>
-
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <span>+7 (495) 123-45-67</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">✉️</span>
-                        <span>hello@d8.studio</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📷</span>
-                        <span>@d8studio</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script>
-        // Add pulse effect to CTA buttons
-        document.addEventListener('DOMContentLoaded', () => {
-            const ctaButtons = document.querySelectorAll('.header-cta .btn-primary');
-            ctaButtons.forEach(btn => {
-                btn.classList.add('pulse');
-            });
-        });
-
-        // Hero Slider Functionality
-        class HeroSlider {
-            constructor() {
-                this.slides = document.querySelectorAll('.hero-slide');
-                this.dots = document.querySelectorAll('.dot');
-                this.progressBar = document.querySelector('.progress-bar');
-                this.currentSlide = 0;
-                this.slideInterval = 6000; // 6 seconds
-                this.progressInterval = null;
-                this.autoSlideInterval = null;
-
-                this.init();
-            }
-
-            init() {
-                // Add click handlers to dots
-                this.dots.forEach((dot, index) => {
-                    dot.addEventListener('click', () => this.goToSlide(index));
-                });
-
-                // Start auto-slide
-                this.startAutoSlide();
-
-                // Pause on hover
-                const heroSection = document.querySelector('.hero');
-                heroSection.addEventListener('mouseenter', () => this.pauseAutoSlide());
-                heroSection.addEventListener('mouseleave', () => this.startAutoSlide());
-            }
-
-            goToSlide(slideIndex) {
-                // Remove active class from current slide and dot
-                this.slides[this.currentSlide].classList.remove('active');
-                this.dots[this.currentSlide].classList.remove('active');
-
-                // Add active class to new slide and dot
-                this.currentSlide = slideIndex;
-                this.slides[this.currentSlide].classList.add('active');
-                this.dots[this.currentSlide].classList.add('active');
-
-                // Reset progress
-                this.resetProgress();
-            }
-
-            nextSlide() {
-                const nextIndex = (this.currentSlide + 1) % this.slides.length;
-                this.goToSlide(nextIndex);
-            }
-
-            startAutoSlide() {
-                this.pauseAutoSlide(); // Clear any existing intervals
-
-                // Start progress animation
-                this.startProgress();
-
-                // Set auto-slide interval
-                this.autoSlideInterval = setInterval(() => {
-                    this.nextSlide();
-                }, this.slideInterval);
-            }
-
-            pauseAutoSlide() {
-                if (this.autoSlideInterval) {
-                    clearInterval(this.autoSlideInterval);
-                    this.autoSlideInterval = null;
-                }
-                if (this.progressInterval) {
-                    clearInterval(this.progressInterval);
-                    this.progressInterval = null;
-                }
-            }
-
-            startProgress() {
-                let progress = 0;
-                const increment = 100 / (this.slideInterval / 50); // Update every 50ms
-
-                this.progressBar.style.width = '0%';
-
-                this.progressInterval = setInterval(() => {
-                    progress += increment;
-                    this.progressBar.style.width = progress + '%';
-
-                    if (progress >= 100) {
-                        clearInterval(this.progressInterval);
-                    }
-                }, 50);
-            }
-
-            resetProgress() {
-                if (this.progressInterval) {
-                    clearInterval(this.progressInterval);
-                }
-                this.progressBar.style.width = '0%';
-                this.startProgress();
-            }
-        }
-
-        // Header Scroll Effect
-        class HeaderScroll {
-            constructor() {
-                this.header = document.querySelector('.header');
-                this.init();
-            }
-
-            init() {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 100) {
-                        this.header.classList.add('scrolled');
-                    } else {
-                        this.header.classList.remove('scrolled');
-                    }
-                });
-            }
-        }
-
-        // Initialize when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            new HeroSlider();
-            new HeaderScroll();
-        });
-    </script>
+<script src="script.js"></script>
 </body>
-
 </html>

@@ -9,78 +9,44 @@
 </head>
 <body>
 <!-- Header Section -->
-<header class="header">
-  <div class="container">
-    <div class="header-content">
-      <div class="logo">
-        <img src="images/logo.png" alt="D8 Studio" class="logo-img">
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <img src="images/logo.png" alt="D8 Studio" class="logo-img" />
+          </div>
+          <nav class="nav">
+            <a href="#hero" class="nav-link">Главная</a>
+            <a href="#services" class="nav-link">Услуги</a>
+            <a href="#interior" class="nav-link">Интерьер</a>
+            <a href="#location" class="nav-link">Локация</a>
+            <a href="#reviews" class="nav-link">Отзывы</a>
+            <a href="#contact" class="nav-link">Контакты</a>
+          </nav>
+          <div class="header-cta">
+            <button class="btn btn-primary booking-btn">
+              Забронировать студию
+            </button>
+          </div>
+          <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
-      <nav class="nav">
-        <a href="#hero" class="nav-link">Главная</a>
-        <a href="#services" class="nav-link">Услуги</a>
-        <a href="#interior" class="nav-link">Интерьер</a>
-        <a href="#location" class="nav-link">Локация</a>
-        <a href="#reviews" class="nav-link">Отзывы</a>
-        <a href="#contact" class="nav-link">Контакты</a>
-      </nav>
-      <div class="header-cta">
-        <button class="btn btn-primary booking-btn">Забронировать студию</button>
-      </div>
-      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </div>
-</header>
+    </header>
 
 <!-- Hero Section -->
-<section id="hero" class="hero">
-  <div class="hero-bg">
-    <img src="images/studio photos (best picks)/IMG_9117.JPG" alt="D8 Studio - Студия с лучшими видами в Москве" class="hero-image">
-    <div class="hero-overlay"></div>
+<section class="hero" id="hero">
+  <div class="hero-text">
+    <h1>Студия с лучшими видами в Москве</h1>
+    <p>Арендуйте профессиональную студию на 13-м этаже с панорамными окнами, естественным светом и всеми удобствами. Идеально для съёмок, встреч и творческой работы.</p>
   </div>
   
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-icon">🏢</span>
-        13-й этаж • Панорамные виды • Естественный свет
-      </div>
-      
-      <h1 class="hero-title">
-        Студия с <em>лучшими видами</em> в Москве
-      </h1>
-      
-      <p class="hero-description">
-        Арендуйте профессиональную студию на 13-м этаже с панорамными окнами, естественным светом и всеми удобствами. Идеально для съемок, встреч и творческой работы.
-      </p>
-      
-      <div class="hero-buttons">
-        <button class="btn btn-primary btn-large booking-btn">
-          Забронировать студию
-        </button>
-        <button class="btn btn-glass btn-large" onclick="scrollToSection('services')">
-          Посмотреть услуги
-        </button>
-      </div>
-      
-      <div class="hero-features">
-        <div class="feature-item">
-          <span class="feature-icon">🏢</span>
-          <span>13-й этаж</span>
-        </div>
-        <div class="feature-item">
-          <span class="feature-icon">🌅</span>
-          <span>Панорамные виды</span>
-        </div>
-        <div class="feature-item">
-          <span class="feature-icon">☀️</span>
-          <span>Естественный свет</span>
-        </div>
-      </div>
-    </div>
+  <div class="hero-actions">
+    <button class="hero-btn primary">Забронировать студию</button>
+    <button class="hero-btn secondary">Обсудить проект</button>
   </div>
 </section>
 
@@ -446,24 +412,7 @@
     </div>
   </div>
 
-  <!-- Lightbox Modal -->
-  <div class="lightbox" id="lightbox">
-    <div class="lightbox-content">
-      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-      <img class="lightbox-image" id="lightboxImage" alt="">
-      <div class="lightbox-nav">
-        <button class="lightbox-prev" onclick="previousImage()">&#8249;</button>
-        <button class="lightbox-next" onclick="nextImage()">&#8250;</button>
-      </div>
-      <div class="lightbox-info" id="lightboxInfo">
-        <h4 id="lightboxTitle"></h4>
-        <p id="lightboxDescription"></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="location-benefits section">
+<section class="location-benefits section" id="location">
         <div class="container">
             <div class="location-benefits-content">
                 <!-- Location Section -->
@@ -562,7 +511,7 @@
     </section>
 
 <!-- Reviews Section -->
-<section class="reviews-section">
+<section class="reviews-section" id="reviews">
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">Отзывы Клиентов</h2>
